@@ -936,17 +936,20 @@
           </div>
         </div>
 
-        <!-- UNESCO -->
+        <!-- UNESCO — UPDATED -->
         <div class="paper project-paper">
-          <span class="inprogress-badge"><span class="pulse-dot" style="margin-right:0;"></span>in progress</span>
-          <div class="paper-label">In Progress · Data Analysis</div>
+          <div class="paper-label">Data Analysis · Interactive Dashboard</div>
           <h3 class="font-serif" style="margin-top: 1rem; font-size: 1.5rem; line-height: 1.15; letter-spacing: -0.01em; color: var(--paper-ink);">UNESCO Heritage Atlas</h3>
-          <p style="margin-top: 1rem; color: var(--paper-muted); line-height: 1.7; font-size: 14px;">Exploratory analysis of ~1,200 UNESCO World Heritage sites — clustering by region, criteria and risk, with an interactive map and dashboard surfacing endangered cultural and natural sites over time.</p>
+          <p style="margin-top: 1rem; color: var(--paper-muted); line-height: 1.7; font-size: 14px;">Exploratory analysis of 1,248 UNESCO World Heritage sites across 171 countries — with an interactive map, continent and category filters, and a searchable site browser.</p>
           <div class="project-paper-tags">
-            <span class="paper-tag">Python</span><span class="paper-tag">Pandas</span><span class="paper-tag">NumPy</span><span class="paper-tag">Matplotlib</span><span class="paper-tag">Seaborn</span>
+            <span class="paper-tag">Python</span><span class="paper-tag">Pandas</span><span class="paper-tag">NumPy</span><span class="paper-tag">Matplotlib</span><span class="paper-tag">Seaborn</span><span class="paper-tag">Plotly.js</span><span class="paper-tag">country_converter</span>
           </div>
-          <div style="margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--paper-line);font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--paper-muted);">
-            dataset: <a href="https://whc.unesco.org/en/list/" target="_blank" rel="noreferrer" class="featured-link">unesco.org/dataset <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a> · ~1.2k sites
+          <div style="margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--paper-line);font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--paper-muted);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;">
+            <span>dataset: <a href="https://whc.unesco.org/en/list/" target="_blank" rel="noreferrer" class="featured-link">unesco.org/dataset <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a> · 1,248 sites</span>
+            <a href="./projects/unesco-heritage/" class="featured-link" style="font-size:12px;">
+              View Dashboard
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
           </div>
         </div>
       </div>
@@ -1029,11 +1032,9 @@
       return e;
     }
 
-    // Defs
     const defs = el('defs', {});
     svg.appendChild(defs);
 
-    // Edges
     const edges = [];
     positions.slice(0, -1).forEach((layer, li) => {
       layer.forEach((a, ai) => {
@@ -1051,16 +1052,13 @@
       });
     });
 
-    // Spike particles (every 3rd edge)
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (!reduced) {
       edges.filter((_, i) => i % 3 === 0).forEach((e) => {
         const c = el('circle', { r: 2.2, fill: accent });
-
         const animCx = el('animate', { attributeName: 'cx', from: e.x1, to: e.x2, dur: `${e.dur}s`, begin: `${e.delay}s`, repeatCount: 'indefinite' });
         const animCy = el('animate', { attributeName: 'cy', from: e.y1, to: e.y2, dur: `${e.dur}s`, begin: `${e.delay}s`, repeatCount: 'indefinite' });
         const animOp = el('animate', { attributeName: 'opacity', values: '0;1;1;0', keyTimes: '0;0.1;0.85;1', dur: `${e.dur}s`, begin: `${e.delay}s`, repeatCount: 'indefinite' });
-
         c.appendChild(animCx);
         c.appendChild(animCy);
         c.appendChild(animOp);
@@ -1068,13 +1066,10 @@
       });
     }
 
-    // Nodes
     positions.forEach((layer, li) => {
       layer.forEach((p, pi) => {
         const delay = li * 0.35 + pi * 0.08;
         const g = el('g', {});
-
-        // Outer pulse
         const outer = el('circle', { cx: p.x, cy: p.y, r: 11, fill: accent, opacity: 0.12 });
         if (!reduced) {
           const ar = el('animate', { attributeName: 'r', values: '11;16;11', dur: '2.2s', begin: `${delay}s`, repeatCount: 'indefinite' });
@@ -1083,8 +1078,6 @@
           outer.appendChild(ao);
         }
         g.appendChild(outer);
-
-        // Inner dot
         const inner = el('circle', { cx: p.x, cy: p.y, r: 6, fill: accent });
         if (!reduced) {
           const ao2 = el('animate', { attributeName: 'opacity', values: '0.7;1;0.7', dur: '2.2s', begin: `${delay}s`, repeatCount: 'indefinite' });
