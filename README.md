@@ -19,7 +19,7 @@ I'm currently open to full-time roles in ML engineering, data science, quantitat
 ### UNESCO Heritage Atlas *(Personal Project)*
 Exploratory analysis of 1,248 UNESCO World Heritage Sites across 171 countries, with an interactive dashboard featuring a Leaflet world map, Plotly charts, and a searchable site browser.
 
-→ [View Dashboard](https://coachellaaaas.github.io/personal-portfolio/projects/unesco-heritage/)
+→ [View Dashboard](https://coachellaaaas.github.io/personal-portfolio/projects/unesco/)
 
 ### FinSignal — Financial Sentiment & Market Signal
 → [Go to Repository](https://github.com/coachellaaaas/FinSignal)
