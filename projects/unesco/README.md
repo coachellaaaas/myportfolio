@@ -4,7 +4,7 @@ I built this as a personal data project to explore the full UNESCO World Heritag
 
 The goal was simple: clean the data properly, find what's interesting, and present it in a way that's actually enjoyable to explore.
 
-🌍 **[View Live Dashboard](https://coachellaaaas.github.io/personal-portfolio/projects/unesco-heritage/)**
+🌍 **[View Live Dashboard](https://coachellaaaas.github.io/personal-portfolio/projects/unesco/)**
 
 ---
 
