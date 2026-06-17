@@ -21,6 +21,8 @@ Exploratory analysis of 1,248 UNESCO World Heritage Sites across 171 countries, 
 
 → [View Dashboard](https://coachellaaaas.github.io/personal-portfolio/projects/unesco-heritage/)
 
+### FinSignal — Financial Sentiment & Market Signal
+→ [Go to Repository](https://github.com/coachellaaaas/FinSignal)
 ---
 
 ## Stack
