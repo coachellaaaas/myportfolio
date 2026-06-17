@@ -19,10 +19,11 @@ I'm currently open to full-time roles in ML engineering, data science, quantitat
 ### UNESCO Heritage Atlas *(Personal Project)*
 Exploratory analysis of 1,248 UNESCO World Heritage Sites across 171 countries, with an interactive dashboard featuring a Leaflet world map, Plotly charts, and a searchable site browser.
 
-→ [View Dashboard](https://coachellaaaas.github.io/personal-portfolio/projects/unesco/)
+→ [View Dashboard](https://coachellaaaas.github.io/unesco_heritage_analysis/)
 
 ### FinSignal — Financial Sentiment & Market Signal
 → [Go to Repository](https://github.com/coachellaaaas/FinSignal)
+
 ---
 
 ## Stack
@@ -52,14 +53,8 @@ The design uses:
 ## Structure
 
 ```
-personal-portfolio/
+myportfolio/
 ├── index.html                      ← the whole site
-├── projects/
-│   └── unesco-heritage/            ← UNESCO dashboard
-│       ├── index.html
-│       ├── heritage.json
-│       ├── analysis.ipynb
-│       └── README.md
 └── README.md
 ```
 
@@ -67,4 +62,4 @@ personal-portfolio/
 
 ## Contact
 
-[code37.piyathida@outlook.com](mailto:code37.piyathida@outlook.com) · [LinkedIn](https://www.linkedin.com/in/piyathida-suwannakat) · [GitHub](https://github.com/coachellaaaas)
+[codexchapter17@gmail.com](mailto:codexchapter17@gmail.com) · [LinkedIn](https://www.linkedin.com/in/piyathida-suwannakat) · [GitHub](https://github.com/coachellaaaas)
